@@ -12,27 +12,27 @@ var d = document;
  
         function addRow ()
         {
-            //Нашёл значения с формы
+            //Находим значения с формы
             model = d.getElementById('model').value;
             year = d.getElementById('year').value;
             cost = d.getElementById('cost').value;
             reserve = d.getElementById('reserve').value;
             speed = d.getElementById('speed').value;
-            myForm = d.getElementById('form1');
+            myForm = d.getElementById('form');
             button_delete = d.createTextNode("<button class='btn btn-danger'  onclick='deleteRow(this)'>Удалить</button>").nodeValue;
             button_edit = d.createTextNode("<button class='btn btn-info' onclick='editRow(this)'>Редактировать</button> ").nodeValue;
             button_save_edit = d.createTextNode("<button class='btn btn-success' onclick='saveEditRow(this)'>Сохранить</button> ").nodeValue;
             
  
-            //Нашёл нужную таблицу
+            //Находим нужную таблицу
             var tbody = d.getElementById('table').getElementsByTagName('TBODY')[0];
  
-            //Создаю строку таблицы и добавляем ее
+            //Создаём строку таблицы и добавляем ее
             var row = d.createElement("TR");
             tbody.appendChild(row);
- 
-            // Создаю ячейки в вышесозданной строке
-            // и добавляю их
+
+            // Создаём ячейки в вышесозданной строке
+            // и добавляем их
             var td1 = d.createElement("TD");
             var td2 = d.createElement("TD");
             var td3 = d.createElement("TD");
@@ -51,7 +51,7 @@ var d = document;
             row.appendChild(td7);
             row.appendChild(td8);
  
-            // Наполняю ячейки
+            // Наполняем ячейки
             td1.innerHTML = model;
             td2.innerHTML = year;
             td3.innerHTML = cost;
@@ -121,11 +121,10 @@ var d = document;
         
         for(var tBody of target.closest('table').tBodies)
             tBody.append(...[...tBody.rows].sort(comparator(index, order)));
- 
+
         for(var cell of target.parentNode.cells)
             cell.classList.toggle('sorted', cell === target);
     };
     
     document.querySelectorAll('.table_sort thead .sort').forEach(tableTH => tableTH.addEventListener('click', () => getSort(event)));
-    
 });
