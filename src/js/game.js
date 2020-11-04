@@ -116,31 +116,31 @@ const UPDATE_TIME = 1000 / 60;
 var timer = null;
 
 var canvas = document.getElementById("canvas"); //Получение холста из DOM
-var ctx = canvas.getContext("2d"); //Получение контекста для работы с холстом
+var ctx = canvas.getContext("2d"); //Получение контекста — через него можно работать с холстом
 
-var scale = 0.1;
+var scale = 0.13;
 
-Resize(); //Изменение размера холста при запуске
+Resize(); //При загрузке страницы задаётся размер холста
 
-window.addEventListener("resize", Resize); //Изменение размера холста с размером окна
+window.addEventListener("resize", Resize); //При изменении размеров окна будут меняться размеры холста
 
 //Запрет открывать контекстное меню для улучшения игры на мобильных устройствах
 canvas.addEventListener("contextmenu", function (e) { e.preventDefault(); return false; }); 
 
 window.addEventListener("keydown", function (e) { KeyDown(e); }); //Прослушивание событий клавиатуры
 
-var objects = []; //Игровые объекты
+var objects = []; //Массив игровых объектов
 
 var roads = 
 [
 	new Road("game_img/road.jpg", 0),
 	new Road("game_img/road.jpg", canvas.width)
-]; //Фоны
+]; //Массив с фонами
 
 var player = new Car("game_img/tesla_cyber.png", canvas.width / 2, canvas.height / 2, true); //Объект игрока
 
 
-var speed = 5;
+var speed = 8;
 
 Stop();
 
@@ -173,7 +173,8 @@ function Update()
 
 	if(player.dead)
 	{
-		alert("Тест-драйв окончен!");
+		//alert("Well.. Maybe it was a little too hard. But it didn't go through!");
+		alert_msg("Well.. Maybe it was a little too hard. But it didn't go through!");
 		Stop();
 	}
 
@@ -202,7 +203,8 @@ function Update()
 
 		if(hit)
 		{
-			alert("Тест-драйв окончен!");
+			//alert("Well.. Maybe it was a little too hard. But it didn't go through!");
+			alert_msg("Well.. Maybe it was a little too hard. But it didn't go through!");
 			Stop();
 			player.dead = true;
 			break;
