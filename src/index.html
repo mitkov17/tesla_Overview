@@ -82,7 +82,6 @@
                                         <small id="emailHelp" class="form-text text-muted">Мы никогда никому не передадим вашу электронную почту.</small>
                                       </div>
 
-
                                         <div class="form-group">
                                           <label for="exampleFormControlFile1">Ваше фото</label>
                                           <input name="file" type="file" class="form-control-file" id="exampleFormControlFile1">
@@ -102,12 +101,11 @@
                               </div>
                             </div>
                           </div>
-                        
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
     
 
     <section class="promo">
@@ -714,33 +712,33 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="model">Модель</label>
-                                                <input minlength="2" maxlength="50" type="text" name="model" class="form-control" id="model" placeholder="Введите название модели" required
-                                                title="Разрешено использовать только пробелы и латинские буквы"
-                                                pattern="^[a-zA-Z\s]+$">
+                                                <input minlength="2" maxlength="30" type="text" name="model" class="form-control" id="model" placeholder="Введите название модели" required
+                                                title="Разрешено использовать только пробелы, цифры и латинские буквы"
+                                                pattern="^[a-zA-Z-0-9\s]+$">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="year">Год выпуска</label>
-                                                <input type="number" name="year" class="form-control" id="year" placeholder="Введите год выпуска модели" required>
+                                                <input minlength="1" maxlength="10" type="number" name="year" class="form-control" id="year" placeholder="Введите год выпуска модели" required>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="cost">Цена($)</label>
-                                                <input type="number" name="cost" class="form-control" id="cost" placeholder="Введите цену модели" required>
+                                                <input minlength="1" maxlength="10" type="number" name="cost" class="form-control" id="cost" placeholder="Введите цену модели" required>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="reserve">Запас хода(км)</label>
-                                                <input type="number" name="reserve" class="form-control" id="reserve" placeholder="Введите запас хода модели" required>
+                                                <input minlength="1" maxlength="10" type="number" name="reserve" class="form-control" id="reserve" placeholder="Введите запас хода модели" required>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="speed">Скорость(км/ч)</label>
-                                                <input type="number" name="speed" class="form-control" id="speed" placeholder="Введите вашу зарплату" required>
+                                                <input minlength="1" maxlength="10" type="number" name="speed" class="form-control" id="speed" placeholder="Введите вашу зарплату" required>
                                             </div>
                                         </div>
                                         <div class="col-12">
