@@ -19,6 +19,11 @@ $(document).ready(function(){
             email: {
                 required: true,
                 email: true
+            },
+            nameTesla: {
+                required: true,
+                minlength: 2,
+                maxlength: 30
             }
         },
         messages: {
@@ -40,7 +45,12 @@ $(document).ready(function(){
             email: {
               required: "Пожалуйста, введите свой адрес электронной почты",
               email: "Введённая почта должна быть формата name@domain.com"
-            }
+            },
+            nameTesla: {
+                required: "Пожалуйста, введите название модели",
+                minlength: jQuery.validator.format("Не менее {0} символов!"),
+                maxlength: jQuery.validator.format("Не более {0} символов!")
+            },
         }
     });
 
