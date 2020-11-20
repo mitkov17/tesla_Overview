@@ -61,4 +61,8 @@ $(document).ready(function(){
     document.querySelector('#idSurname').addEventListener('keyup', function(){
         this.value = this.value.replace(/^[.:;№"!#$%&@'*+/=?^_`(){|}~-]/g, '');
     });
+
+    document.querySelector('#model').addEventListener('keyup', function(){
+        this.value = this.value.replace(/^[.:;№"!#$%&@'*+/=?^_`(){|}~-]/g, '');
+    });
 });

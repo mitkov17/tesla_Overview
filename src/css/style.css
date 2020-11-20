@@ -444,25 +444,30 @@ nav {
   z-index: 2;
 }
 
-table, th, td { border: solid 2px rgb(212, 201, 201);
-  border-collapse: collapse; 
-  padding: 5px 3px; 
-  text-align: center;
+table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  background: white;
+  max-width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
 }
-
 th {
-  height: 40px;
-  width: 40px;
   font-size: 18px;
-  line-height: 40px;
+  font-weight: normal;
+  color: #039;
+  border-bottom: 2px solid #6678b1;
+  padding: 10px 8px;
 }
-
 td {
-  height: 40px;
-  width: 40px;
+  color: #669;
+  padding: 9px 8px 9px 1px;
+  transition: .3s linear;
   font-size: 18px;
   line-height: 30px;
 }
+tr:hover td {color: #6699ff;}
 
 .add_btn {
   margin-top: 19px;
@@ -624,6 +629,10 @@ a.alertm_close {
   right: 7px;    
   top: 0px;    
   font-size: 25px;
+}
+
+#redact {
+  margin-top: 15px;
 }
 
 @font-face {

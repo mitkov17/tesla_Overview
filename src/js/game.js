@@ -173,8 +173,8 @@ function Update()
 
 	if(player.dead)
 	{
-		//alert("Well.. Maybe it was a little too hard. But it didn't go through!");
 		alert_msg("Well.. Maybe it was a little too hard. But it didn't go through!");
+		//alert_msg("Test drive is over!");
 		Stop();
 	}
 
@@ -203,8 +203,8 @@ function Update()
 
 		if(hit)
 		{
-			//alert("Well.. Maybe it was a little too hard. But it didn't go through!");
 			alert_msg("Well.. Maybe it was a little too hard. But it didn't go through!");
+			//alert_msg("Test drive is over!");
 			Stop();
 			player.dead = true;
 			break;
